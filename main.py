@@ -3,12 +3,31 @@ from button import Button
 
 pygame.init()
 
-SCREEN = pygame.display.set_mode((800, 800))
+# Constantes
+WIDTH = 800
+HEIGHT = 800
+
+# Configurar la ventana
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption('Automaton Runner')
+
+background_image = pygame.image.load("square/fondo_b.png")
+#
+#
+#incluir las class
+#class Player:
+# Clase para el enemigo con autómata finito
+#class Enemy:
+#class PowerUp:
+#class Button():
+#
+
+SCREEN = pygame.display.set_mode((WIDTH,HEIGHT))
 pygame.display.set_caption("Menu")
 
 BG = pygame.image.load("square/Background.png")
 
-def get_font(size): # Returns Press-Start-2P in the desired size
+def get_font(size): 
     #Estilo de letra 
     return pygame.font.Font("square/font.ttf", size)
 
@@ -19,10 +38,7 @@ def play():
 
         SCREEN.fill("black")
 
-        #PLAY_TEXT = get_font(45).render("This is the PLAY screen.", True, "White")
-        #PLAY_RECT = PLAY_BALL.get_rect(center=(200, 400))
         SCREEN.blit(PLAY_BALL)
-
         #Button BACK
         PLAY_BACK = Button(image=None, pos=(800, 800), 
                             text_input="BACK", font=get_font(20), base_color="White", hovering_color="Green")
@@ -111,3 +127,5 @@ def main_menu():
                     sys.exit()
         
         pygame.display.update()
+
+
