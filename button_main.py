@@ -18,6 +18,8 @@ background_image = pygame.image.load("square/fondo_b.png")
 #
 #class PowerUp
 #
+#class PowerUp
+#
 class Button():
 	def __init__(self, image, pos, text_input, font, base_color, hovering_color):
 		self.image = image
