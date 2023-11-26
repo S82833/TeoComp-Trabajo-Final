@@ -1,3 +1,23 @@
+import pygame, sys
+import random
+
+# Inicializar pygame
+pygame.init()
+
+# Constantes
+WIDTH = 800
+HEIGHT = 800
+
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption('Automaton Runner')
+
+background_image = pygame.image.load("square/fondo_b.png")
+
+#
+#class Enemy
+#
+#class PowerUp
+#
 class Button():
 	def __init__(self, image, pos, text_input, font, base_color, hovering_color):
 		self.image = image
@@ -27,3 +47,4 @@ class Button():
 			self.text = self.font.render(self.text_input, True, self.hovering_color)
 		else:
 			self.text = self.font.render(self.text_input, True, self.base_color)
+
