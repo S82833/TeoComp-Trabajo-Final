@@ -1,5 +1,35 @@
+import pygame, sys
+import random
+
+# Inicializar pygame
+pygame.init()
+
+# Constantes
+WIDTH = 800
+HEIGHT = 800
+PLAYER_SIZE = 50
+ENEMY_SIZE = 40
+ENEMY_SPEED = 2
+PLATFORM_HEIGHT = 20
+PLATFORM_WIDTH = 150
+SAFE_ZONE = 150  # Distancia segura alrededor del jugador donde los enemigos no pueden aparecer al inicio
+CURRENT_LEVEL = 1
+
+# Configurar la ventana
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption('Automaton Runner')
+
+background_image = pygame.image.load("square/fondo_b.png")
+
+# Clases del juego
+# Clase para el jugador
+# Clase para el enemigo con autómata finito
+# Función para generar plataformas sin superposición vertical y con espacios saltables
+# Inicializa la fuente.
+# Función principal del juego
+
 def game_loop():
-    #main_menu()
+    
     global CURRENT_LEVEL
     clock = pygame.time.Clock()
     # Generar enemigos según el nivel
@@ -76,8 +106,9 @@ def game_loop():
         for enemy in enemies:
             enemy.draw(screen)
 
-        LAST_PLATFORM_IMAGE = pygame.image.load("square/imagen_last_platform.png")  
-        PLATFORM_IMAGE = pygame.image.load("square/imagen_platform.png") 
+        LAST_PLATFORM_IMAGE = pygame.image.load("square/imagen_last_platform.png")
+        PLATFORM_IMAGE = pygame.image.load("square/imagen_platform.png")  
+
 
         for i, platform in enumerate(platforms):
             if i == len(platforms) - 1:  # Si es la última plataforma
